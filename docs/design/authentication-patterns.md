@@ -12,20 +12,25 @@ Apply the following patterns as applicable to create or enhance the authenticati
 
 ## Authentication flow for Single Sign On (SSO)
 
-While Single Sign On (SSO) support has not yet officially been released, once released it should be considered for the default authentication flow of your add-in.  SSO provides the user with the best authentication experience, esentially moving the authentication flow into the installation process.
 
-As an add-in is being installed, a user will see a consent modal similar to the one below:
+While Single Sign On (SSO) support has not yet officially been released, once published it should be considered for the default authentication flow of your add-in.  SSO provides the user with the best authentication experience, esentially moving the authentication into the broader installation process.
+
+As an add-in is being installed, a user will see a consent window similar to the one below:
 
 ![Authentication Flow - Single Sign On](../Screens/Components/Single_Sign_On_Consent@2x.png)
+
+The add-in publisher will have control over the logo and strings included in the SSO window, but the UI is pre-configured by Microsoft.
 
 After consent has been given by the user, the installation process will conclude, and your add-in will be added and ready to use.
 
 ![Authentication Flow - Single Sign On](../Screens/Addin_Screens/SSO_Modal@2x.png)
 
+![Authentication Flow - Single Sign On](../Screens/Addin_Screens/TaskPane_Opened@2x.png)
 
 ## Authentication flow for a single identity provider
 
-If SSO is not available to a user, an alternative authentication flow is for a single identity provider.  He
+If SSO is not available to a user, an alternative authentication flow is for a single or multi-identity provider.
+=======
 
 ![Authentication Dialog Single Identity - Flowchart](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_single_flow.png)
 
@@ -33,61 +38,12 @@ If SSO is not available to a user, an alternative authentication flow is for a s
 ![Authentication Flow - First run placemat](../Screens/Addin_Screens/FRE-Value@2x.png)
 
 2. Provider Sign-in - The identity provider will have their own UI. Microsoft Azure Active Directory allows customization of sign-in and access panel pages for consistent look and feel with your service. [Learn More](https://azure.microsoft.com/en-us/documentation/articles/active-directory-add-company-branding/).
-![Authentication Dialog Single Identity - Provider Sign-in](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_single_taskPaneCallouts2.png)
 
+![Authentication Dialog Single Identity - Provider Sign-in](../Screens/Addin_Screens/Multi_Authentication_Modal@2x.png)
 
 3. Progress - Indicate progress while settings and UI load.
-![Authentication Dialog Single Identity - Progress](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_single_taskPaneCallouts3.png)
-
-4. Home Page - Land your users on a useful home page to begin their add-in experience.
-![Authentication Dialog Single Identity - Home Page](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_single_taskPaneCallouts4.png)
-
-5. Sign-out - Include a discoverable entry point for users to manage their profile.
-![Authentication Dialog Single Identity - Sign-out](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_single_taskPaneCallouts5.png)
-
-
-
-
-
-## Authentication flow for multiple identity providers
-
- Consider this UX design pattern when using multiple identity providers or your add-in has limited space to display branded sign-in buttons. 
-
-Recommended screen flow for when using multiple identity providers in your add-in.
-
-![Authentication Dialog Multiple Identity - Flowchart](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_multi_flow.png)
-
-
-1. First Run Placemat - The screen contains a clear call to action, "Sign-in"
-![Authentication Flow - First Run Placemat](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_multi_taskPaneCallouts.png)
-
-
-2. Provider Choices - End users are presented with a set of identity providers to choose from, including an authentication form. Note that the add-in UI is on hold until the dialog closes.
-![Authentication Dialog Multiple Identity - Provider Choices](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_multi_taskPaneCallouts2.png)
-
-
-3. Provider Sign-in - The identity provider will have their own UI. Microsoft Azure Active Directory allows customization of sign-in and access panel pages for consistent look and feel with your service. [Learn More](https://azure.microsoft.com/en-us/documentation/articles/active-directory-add-company-branding/).
-![Authentication Dialog Multiple Identity - Provider Sign-in](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_multi_taskPaneCallouts3.png)
-
-
-4. Progress - Indicate progress while settings and UI load. 
-![Authentication Dialog Multiple Identity - Progress](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_multi_taskPaneCallouts4.png)
-
-
-5. Home Page - Land your users on a useful home page to begin their add-in experience.
-![Authentication Dialog Multiple Identity - Home Page](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_multi_taskPaneCallouts5.png)
-
-
-6. Sign-out - Include a discoverable entry point for users to manage their profile.
-![Authentication Dialog Multiple Identity - Sign-out](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_multi_taskPaneCallouts6.png)
-
-### Variants
-Provider Choices Variant A - Authentication form with multiple provider sign-in buttons.
-![Authentication Dialog Multiple Identity - Provider choices variant A](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_multi_taskPaneCallouts7.png)
-
-Provider Choices Variant B - Multiple provider sign-in buttons.
-![Authentication Dialog Multiple Identity - Provider choices variant B](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-UX-Design-Patterns/master/assets/images/auth_multi_taskPaneCallouts8.png)
-
+![Authentication Dialog Single Identity - Progress](../Screens/Addin_Screens/Multi_Authentication_Modal_Interstitial@2x.png)
+=======
 
 ## More details
 
